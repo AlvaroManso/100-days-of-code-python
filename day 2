@@ -1,0 +1,20 @@
+#a = input("Type a two digit number")
+#print(int(a[0]) + int(a[1]))
+#height = input("enter your height in m: ")
+#weight = input("enter your height in kg: ")
+#print(int(weight) / (float(height) * float(height)))
+#age = input("What is your current age?")
+#age_int = int(age)
+#months = 90 * 12 - (age_int * 12)
+#weeks = 90 * 52 - (age_int * 52)
+#days = 90 * 365 - (age_int * 365)
+#print(f"You have {days} days, {weeks} weeks, and {months} months left.")
+
+print("welcome to the tip calculator")
+bill = input("What was thes total bill?")
+percentage = input("what percentage tip would you like to give?10,12 or 15?")
+people = input("How many people to split the bill?")
+
+pay = ((int(bill) * int(percentage) / 100) + int(bill)) / int(people)
+
+print(f"Total for person: {round(pay,2)}")
