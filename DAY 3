@@ -1,0 +1,115 @@
+"""
+number = int(input("Which number do you want to choose?"))
+
+if number % 2 == 0:
+     print("This is an even number.")
+
+else:
+     print("This is an odd number.")
+
+
+height = input("enter your height in m: ")
+weight = input("enter your height in kg: ")
+bmi = (int(weight) / (float(height) * float(height)))
+if bmi < 18.5:
+     print("Underweight")
+elif (bmi >= 18.5) and (bmi <= 25):
+     print("Normal weight")
+elif (bmi >= 25.01) and (bmi <= 30):
+     print("overweight")
+elif (bmi >= 30.01) and (bmi <= 35):
+     print("obese")
+elif bmi >= 35.01:
+     print("clinically obese")
+year = input("Which year do you want check?")
+year_int = int(year)
+if year_int % 4 == 0:
+     if year_int % 100 == 0:
+          if year_int % 400 == 0:
+               print(f"the year {year_int} is a leap year.")
+          else:
+               print(f"the year {year_int} is not a leap year.")
+     else:
+          print(f"the year {year_int} is a leap year.")
+else:
+     print(f"the year {year_int} is not a leap year.")
+
+print("welcome to python pizza")
+size = input("What size?")
+add_pepperoni = input("do you want pepperoni?")
+extra_cheese = input("do you want extra cheese?")
+
+total = 0
+if size == "s":
+     total += 15
+     if add_pepperoni == "y":
+          total += 2
+elif size == "m":
+     total += 20
+     if add_pepperoni == "y":
+          total += 3
+elif size == "l":
+     total += 25
+     if add_pepperoni == "y":
+          total += 3
+if extra_cheese == "y":
+     total += 1
+
+print(total)
+
+# Love calculator
+
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+names_combined = name1.lower() + name2.lower()
+
+t = int(names_combined.count("t"))
+r = int(names_combined.count("r"))
+u = int(names_combined.count("u"))
+e = int(names_combined.count("e"))
+
+true = t + r + u + e
+
+l = int(names_combined.count("l"))
+o = int(names_combined.count("o"))
+v = int(names_combined.count("v"))
+e = int(names_combined.count("e"))
+
+love = l + o + v + e
+
+score = int(str(true) + str(love))
+
+if score < 10 or score > 90:
+    print(f"Your score is {score}, you go together like coke and mentos.")
+elif 40 < score < 50:
+    print(f"Your score is {score}. you are allright together")
+else:
+    print(f"Your score is {score}")
+"""
+
+print("Bienvenido a la mazmorra")
+print("Tienes que escapar de aquí. Elige tus acciones cuidadosamente...")
+print("Te encuentras en una habitación oscura.")
+print("Hay una puerta cerrada y una escalera que baja.")
+eleccion = input("¿Qué quieres hacer? [abrir puerta/bajar escalera]: ")
+if eleccion =="abrir puerta":
+     print("la puerta esta atascada y cae una piedra del techo")
+elif eleccion == "bajar escalera":
+     print("Te encuentras en una sala llena de trampas.")
+     eleccion2 = input("que quieres hacer [correr/saltar]?")
+
+     if eleccion2 == "correr":
+          print("Activas la trampa y mueres")
+     elif eleccion2 == "saltar":
+          print("llegas a otra habitacion con 3 puertas")
+          eleccion3 = input("que quieres hacer [puerta derecha/ puerta izquierda / puerta central]?")
+          if eleccion3 == "puerta derecha":
+               input("salen unos leones que te comen")
+          elif eleccion3 == "puerta izquierda":
+               input("aparece un trol y acaba con tu vida")
+          elif eleccion3 == "puerta central":
+               input("la puerta se abre y encuentras un cofre del tesoro!")
+
+
