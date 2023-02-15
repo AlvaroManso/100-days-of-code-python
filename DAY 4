@@ -1,0 +1,66 @@
+import random
+
+random_integer = random.randint(1, 10)
+print(random_integer)
+
+if random_integer <= 5:
+    print("Heads")
+elif random_integer >= 6:
+    print("Tails")
+
+names_string = input("Give me everybody's names, seperated by a comma.")
+names = names_string.split(", ")
+
+random_name = random.choice(names)
+print(random_name)
+
+# 🚨 Don't change the code below 👇
+row1 = ["⬜️","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+
+horizontal = int(position[0])-1
+vertical = int(position[1])-1
+
+map[horizontal][vertical] = "X"
+
+#Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
+
+
+eleccion = input("select one ")
+computer = ("piedra","papel","tijera")
+juego = random.choice(computer)
+print(juego)
+
+if eleccion == "papel":
+    if juego == "piedra":
+        print("you win!")
+    elif juego == "papel":
+        print("draw")
+    elif juego == "tijera":
+        print("you lose")
+
+elif eleccion == "piedra":
+    if juego == "piedra":
+        print("draw")
+    elif juego == "papel":
+        print("you lose")
+    elif juego == "tijera":
+        print("you win!")
+
+elif eleccion == "tijera":
+    if juego == "piedra":
+        print("you lose")
+    elif juego == "papel":
+        print("you win!")
+    elif juego == "tijera":
+        print("draw")
